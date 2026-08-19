@@ -5,132 +5,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Baha Eddine | Personal Web</title>
+    <title>Baha Eddine | Developer Portfolio</title>
 
-    <!--
-        This website uses ONLY HTML.
-        No CSS file, no JavaScript, no external libraries.
-    -->
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #222;
+}
+.hero {
+    min-height: 100vh;
+    background: #1f2937;
+}
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 70px;
+    min-height: 70vh;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+header img {
+    width: 70%;
+    max-width: 900px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
 
-        header img {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
+@media (max-width: 600px) {
+    header img {
+        width: 95%;
+        height: 180px;
+    }
 
-        nav {
-            background: #1f2937;
-            text-align: center;
-            padding: 15px;
-        }
+    header h1 {
+        font-size: 36px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
+    header p {
+        font-size: 16px;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    section {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+}
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-        }
+.header-content {
+    padding: 40px 20px;
+}
 
-        h2 {
-            color: #111827;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
+header h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
 
-        .achievement {
-            padding: 20px;
-            margin: 15px 0;
-            background: #f3f4f6;
-            border-radius: 8px;
-        }
+header p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
 
-        .invention {
-            padding: 20px;
-            margin: 15px 0;
-            background: #eef2ff;
-            border-radius: 8px;
-        }
 
-        .project {
-            padding: 20px;
-            margin: 15px 0;
-            background: #ecfdf5;
-            border-radius: 8px;
-        }
+/* NAVIGATION */
+nav {
+    background: #1f2937;
+    text-align: center;
+    padding: 20px;
+    min-height: 70px;
+    box-sizing: border-box;
 
-        footer {
-            text-align: center;
-            background: #111827;
-            color: white;
-            padding: 30px;
-            margin-top: 50px;
-        }
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 55px 15px;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+section a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+section a:hover {
+    color: #00a86b;
+}
+
+h2 {
+    color: #111827;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
+/* ACHIEVEMENTS */
+.achievement {
+    padding: 20px;
+    margin: 15px 0;
+    background: #f3f4f6;
+    border-radius: 8px;
+}
+
+
+/* INVENTIONS */
+.invention {
+    padding: 20px;
+    margin: 15px 0;
+    background: #eef2ff;
+    border-radius: 8px;
+}
+
+
+/* PROJECTS */
+.project {
+    padding: 20px;
+    margin: 15px 0;
+    background: #ecfdf5;
+    border-radius: 8px;
+}
+
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: transparent;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
+}
+
+.button:hover {
+    background: #00ff88;
+    color: #111;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #111827;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+}
+
     </style>
 </head>
 
 <body>
-
-    <!-- ========================= -->
-    <!-- HEADER -->
-    <!-- ========================= -->
-
+<div class="hero">
     <header>
 
-        <!--
-            Replace "logo.png" with the filename of your logo.
 
-            Example:
-            <img src="logo.png" alt="My Logo">
-        -->
 
         <img src="logo.png" alt="My Logo">
 
+       <div class="header-content">
+
         <h1>Baha Eddine</h1>
 
-        <p>
-            Inventor • Developer • Creator • Student at LPA
-        </p>
+        <p>Developer • Creator • Student at LPA</p>
 
-        <p>
-            Welcome to my personal website.
-        </p>
+        <p>Welcome to my personal website.</p>
+
+        </div>
 
     </header>
 
@@ -141,18 +215,16 @@
 
     <nav>
 
-        <a href="#about">About Me</a>
+        <a class="button" href="#about">About Me</a>
 
-        <a href="#achievements">Achievements</a>
+        <a class="button" href="#achievements">Achievements</a>
+        <a class="button" href="#projects">Projects</a>
+        <a class="button" href="#skills">Skills</a>
 
-        <a href="#inventions">Inventions</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#contact">Contact</a>
+        <a class="button" href="#contact">Contact</a>
 
     </nav>
-
+</div>
 
     <!-- ========================= -->
     <!-- ABOUT ME -->
@@ -167,13 +239,13 @@
         </p>
 
         <p>
-            I am interested in technology, science, programming,
-            invention, and creating new projects.
+            I am interested in programming, science,
+             and gaming.
         </p>
 
         <p>
-            This website is a collection of my work, achievements,
-            inventions, projects, and personal goals.
+            This website is a collection of my work,
+             achievements, and personal projects.
         </p>
 
         <p>
@@ -183,7 +255,7 @@
         <ul>
             <li>Developing some mc server project with java</li>
             <li>Opengl project</li>
-            <li>Surviving</li>
+            <li>Exploring new technologies</li>
         </ul>
 
     </section>
@@ -199,10 +271,10 @@
 
         <div class="achievement">
 
-            <h3>Achievement #1</h3>
+            <h3>Built My Own Drone</h3>
 
             <p>
-                At age of 12years old made my own drone.
+                At the age of 12, I built my own drone.
             </p>
 
             <p>
@@ -214,10 +286,10 @@
 
         <div class="achievement">
 
-            <h3>Achievement #2</h3>
+            <h3>My First Game</h3>
 
             <p>
-                At age 13 created my full functioning game using unity with c#.
+                At the age of 13, I created a fully functional game using Unity and C#.
             </p>
 
             <p>
@@ -229,13 +301,15 @@
 
         <div class="achievement">
 
-            <h3>Achievement #3</h3>
+            <h3>Built and Ran a Minecraft Server</h3>
 
             <p>
-                AT the age of 16 fully running servers with 30 people online.
+                At the age of 16, I built and successfully ran a Minecraft server supporting 30+ Concurrent players.
             </p>
             <p>
-                LT3 btw
+                <a href="https://youtube.com/@soyrn-yt?si=2nOT3h3K9cnr48W0" target="_blank" rel="noopener noreferrer">
+                My Gaming Youtube Channel
+                </a>
             </p>
 
             <p>
@@ -246,46 +320,6 @@
 
     </section>
 
-
-    <!-- ========================= -->
-    <!-- INVENTIONS -->
-    <!-- ========================= -->
-
-    <section id="inventions">
-
-        <h2>My Inventions</h2>
-
-
-        <div class="invention">
-
-            <h3>My First Invention</h3>
-
-            <p>
-                Invented the first drone in tunisia made by one person.
-            </p>
-
-            <p>
-                <strong>Status:</strong> Completed
-            </p>
-
-        </div>
-
-
-        <div class="invention">
-
-            <h3>My Second Invention</h3>
-
-            <p>
-                Invented a fully functional game made by only c++.
-            </p>
-
-            <p>
-                <strong>Status:</strong> Completed
-            </p>
-
-        </div>
-
-    </section>
 
 
     <!-- ========================= -->
@@ -299,10 +333,13 @@
 
         <div class="project">
 
-            <h3>Project #1</h3>
+            <h3>Underground</h3>
 
             <p>
-                Describe your project here.
+                Underground game
+                <a href="https://github.com/BahaRWS" target="_blank" rel="noopener noreferrer">
+                github.com/BahaRWS
+                </a>
             </p>
 
             <p>
@@ -310,9 +347,8 @@
             </p>
 
             <ul>
-                <li>HTML</li>
-                <li>JavaScript</li>
-                <li>Python</li>
+                <li>C#</li>
+                <li>Unity</li>
             </ul>
 
         </div>
@@ -320,23 +356,44 @@
 
         <div class="project">
 
-            <h3>Project #2</h3>
+            <h3>2D Platforme</h3>
 
             <p>
-                Describe your second project here.
+                basic 2D platform game.
+                <a href="https://github.com/BahaRWS" target="_blank" rel="noopener noreferrer">
+                github.com/BahaRWS
+                </a>
             </p>
+           <p>
+                Technologies used:
+            </p>
+
+            <ul>
+                <li>C++</li>
+                <li>SFML</li>
+            </ul>
 
         </div>
 
 
         <div class="project">
 
-            <h3>Project #3</h3>
+            <h3>OpenGL Renderer</h3>
 
             <p>
-                Describe your third project here.
+                OpenGL basic rendering.
+                <a href="https://github.com/BahaRWS"target="_blank" rel="noopener noreferrer">
+                github.com/BahaRWS
+                </a>
+            </p>
+           <p>
+                Technologies used:
             </p>
 
+            <ul>
+                <li>C++</li>
+                <li>OpenGL</li>
+            </ul>
         </div>
 
     </section>
@@ -352,13 +409,13 @@
 
         <ul>
 
-            <li>Programming (all languages)</li>
+            <li>Programming (C++, C#, Java, Python)</li>
 
             <li>Web Development</li>
 
             <li>Problem Solving</li>
 
-            <li>Editor on Davanci</li>
+            <li>Video Editing with DaVinci Resolve</li>
 
             <li>Thumbnail creation</li>
 
@@ -372,26 +429,6 @@
     <!-- ========================= -->
     <!-- GOALS -->
     <!-- ========================= -->
-
-    <section id="goals">
-
-        <h2>My Goals</h2>
-
-        <p>
-            My current goals are:
-        </p>
-
-        <ol>
-
-            <li>Learn Trading</li>
-
-            <li>Get jacked</li>
-
-            <li>Study nutrition</li>
-
-        </ol>
-
-    </section>
 
 
     <!-- ========================= -->
@@ -408,16 +445,18 @@
 
         <p>
             Email:
-            <a href="mailto:YOUR_EMAIL@example.com">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=boubayaeddine007@gmail.com"
+       target="_blank"
+       rel="noopener noreferrer">
                 boubayaeddine007@gmail.com
             </a>
         </p>
 
         <p>
             GitHub:
-            <a href="https://github.com/YOUR_USERNAME">
-                github.com/YOUR_USERNAME
-            </a>
+          <a href="https://github.com/BahaRWS" target="_blank" rel="noopener noreferrer">
+             github.com/BahaRWS
+         </a>
         </p>
 
         <p>
